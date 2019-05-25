@@ -16,10 +16,6 @@ interface Props {
     openUserMenu?: any
 }
 
-interface State {
-    visible: boolean
-}
-
 const mapStateToProps = state => {
     return {
         darkMode: state.theme.darkMode,
@@ -33,11 +29,10 @@ const mapDispatchToProps = dispatch => ({
 })
 
 
-class Dropdown extends React.Component<Props, State> {
+class Dropdown extends React.Component<Props, {}> {
 
     constructor(props) {
         super(props);
-        this.state = { visible: this.props.visible }
     }
 
     handleClickOutside = () => {
@@ -45,7 +40,7 @@ class Dropdown extends React.Component<Props, State> {
             console.log("opening")
             this.props.openUserMenu()
         }
-        
+
     };
 
     render() {

@@ -43,24 +43,24 @@ class Header extends React.Component<Props, State> {
                         Admin Template
                     </div>
                     <div>
-                        <div 
-                            className={"header-icon " + this.props.iconTheme} 
-                            onClick={() => { 
-                                if (!this.props.userMenuOpen) { 
-                                    this.props.openUserMenu() 
-                                } 
+                        <div
+                            className={"header-icon " + this.props.iconTheme + " ignore-react-onclickoutside"}
+                            onClick={() => {
+                                if (!this.props.userMenuOpen) {
+                                    this.props.openUserMenu()
+                                }
                             }}>
                             <FontAwesomeIcon icon={['fas', 'user']} />
                         </div>
                         <div className={"absolute dropdown-transform rounded " + this.props.dropdownTheme}>
-                            <Dropdown 
+                            <Dropdown
                                 visible={this.props.userMenuOpen}
                             />
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         );
     }
 
