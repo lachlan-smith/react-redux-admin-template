@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../../../../styles/sidebar.scss";
 import SidebarBtn from './SidebarBtn';
+import onClickOutside from "react-onclickoutside";
 
 interface Props {
     theme: string,
@@ -45,6 +46,12 @@ class Sidebar extends React.Component<Props, State> {
             open: !this.state.open
         })
     }
+
+    handleClickOutside = () => {
+        if (this.state.open) {
+            this.setState({ open: false })
+        }
+    };
 
     linkSelected() {
         this.setState({ 
@@ -102,4 +109,4 @@ class Sidebar extends React.Component<Props, State> {
 
 }
 
-export default Sidebar;
+export default onClickOutside(Sidebar);
