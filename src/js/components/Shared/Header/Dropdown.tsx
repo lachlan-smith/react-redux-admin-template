@@ -11,7 +11,6 @@ import onClickOutside from "react-onclickoutside";
 interface Props {
     visible: boolean,
     changeTheme: any
-    isOpen: boolean
 }
 
 interface State {
@@ -35,8 +34,13 @@ class Dropdown extends React.Component<Props, State> {
         this.state = { visible: this.props.visible }
     }
 
+    componentDidUpdate() {
+        console.log("State: " + this.state.visible);
+        console.log("Props: " + this.props.visible);
+    }
+
     handleClickOutside = () => {
-        this.setState({ visible: false })
+        this.setState({ visible: this.props.visible })
     };
 
     render() {
@@ -62,4 +66,4 @@ class Dropdown extends React.Component<Props, State> {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dropdown);
+export default connect(mapStateToProps, mapDispatchToProps)(onClickOutside(Dropdown));
