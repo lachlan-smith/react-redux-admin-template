@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../../../../styles/sidebar.scss";
 import { DARK_MODE, USER_MENU_OPEN } from "../../../redux/constants/actionTypes";
 import { changeTheme } from "../../../redux/actions/index";
@@ -61,8 +62,9 @@ class Dropdown extends React.Component<Props, State> {
                                     color="primary"
                                 />
                             }
-                            label="Dark Theme"
+                            label=""
                         />
+                        <FontAwesomeIcon icon={['fas', 'moon']} />&nbsp;&nbsp;Dark Theme
                     </div>
                     : ""}
             </React.Fragment>

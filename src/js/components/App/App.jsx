@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "../Shared/Layout";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faUser, faBars, faHome, faTerminal, faSignal } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faBars, faHome, faTerminal, faSignal, faMoon } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faUser, faBars, faHome, faTerminal, faSignal);
+library.add(fab, faUser, faBars, faHome, faTerminal, faSignal, faMoon);
 
 class App extends React.Component {
 
