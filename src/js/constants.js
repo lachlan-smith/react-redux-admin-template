@@ -1,0 +1,1 @@
+export const MOBILE_WINDOW_SIZE = 1024;

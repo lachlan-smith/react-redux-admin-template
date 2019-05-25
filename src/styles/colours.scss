@@ -1,0 +1,65 @@
+// ## colours
+
+$blue: rgb(73, 104, 161);
+
+// ###############
+// ### content ###
+// ###############
+
+// light theme
+$background: rgb(243, 243, 243);
+
+// dark theme
+$background-dark: #1E1D2A;
+
+// ##############
+// ### header ###
+// ##############
+
+// light theme
+$header-colour: $blue;
+$header-text: white;
+$header-icon: transparent;
+$header-icon-text: white;
+$header-icon-hover: transparent;
+$header-icon-text-hover: rgb(180, 193, 221);
+$dropdown-colour: rgb(238, 238, 238);
+$dropdown-text: rgb(24, 24, 24);
+$dropdown-text-hover: $blue;
+
+// dark theme
+$header-colour-dark: #1E202F;
+$header-text-dark: white;
+$header-icon-dark: transparent;
+$header-icon-text-dark: rgb(233, 233, 233);
+$header-icon-hover-dark: transparent;
+$header-icon-text-hover-dark: $blue;
+$dropdown-colour-dark: rgb(27, 25, 37);
+$dropdown-text-dark: rgb(243, 243, 243);
+$dropdown-text-hover-dark: $blue;
+
+// ###############
+// ### sidebar ###
+// ###############
+
+// light theme
+$sidebar-colour: white;
+$sidebar-btn-colour: transparent;
+$sidebar-btn-text: rgb(88, 88, 88);
+$sidebar-btn-colour-hover: transparent;
+$sidebar-btn-text-hover: #587DA9;
+$menu-icon: transparent;
+$menu-icon-text: white;
+$menu-icon-hover: transparent;
+$menu-icon-text-hover: rgb(180, 193, 221);
+
+// dark theme
+$sidebar-colour-dark: rgb(38, 39, 54);
+$sidebar-btn-colour-dark: transparent;
+$sidebar-btn-text-dark: white;
+$sidebar-btn-colour-hover-dark: transparent;
+$sidebar-btn-text-hover-dark: $blue;
+$menu-icon-dark: transparent;
+$menu-icon-text-dark: rgb(233, 233, 233);
+$menu-icon-hover-dark: transparent;
+$menu-icon-text-hover-dark: $blue;

@@ -1,0 +1,97 @@
+@import "./colours.scss";
+
+$sidebar-width: 310px;
+
+.sidebar-light {
+    background-color: $sidebar-colour;
+    height: 100vh;
+    color: $sidebar-btn-text;
+    font-size: 20px;
+}
+
+.sidebar-dark {
+    background-color: $sidebar-colour-dark;
+    height: 100vh;
+    color: $sidebar-btn-text-dark;
+    font-size: 20px;    
+}
+
+.desktop-sidebar {
+    height: 100vh;
+    width: $sidebar-width;
+}
+
+.mobile-sidebar-closed {
+    visibility: hidden;
+    width: 0;
+}
+
+.mobile-sidebar-open {
+    visibility: visible;
+}
+
+.link-btn {
+    width: $sidebar-width - 50px;
+    margin: 10px;
+    height: 30px;
+    font-size: 18px;
+    & a {
+        text-decoration: none;
+    }
+}
+
+.sidebar-btn-light {
+    background-color: $sidebar-btn-colour;
+    & a {
+        color: $sidebar-btn-text;
+        &:hover {
+            color: $sidebar-btn-text-hover;
+        }
+    }
+    &:hover {
+        background-color: $sidebar-btn-colour-hover;
+    }
+}
+
+.sidebar-btn-dark {
+    background-color: $sidebar-btn-colour-dark;
+    & a {
+        color: $sidebar-btn-text-dark;
+        &:hover {
+            color: $sidebar-btn-text-hover-dark;
+        }
+    }
+    &:hover {
+        background-color: $sidebar-btn-colour-hover-dark;
+    }
+}
+
+.menu-icon {
+    cursor: pointer;
+    z-index: 500;
+    top: 15px;
+    display: inline-block;
+    border-radius: 60px;
+    padding: 0.7em 1em;
+    &:hover {
+        transition: 0.3s;
+    }
+}
+
+.menu-icon-dark {
+    background-color: $menu-icon-dark;
+    color: $menu-icon-text-dark;
+    &:hover {
+        background-color: $menu-icon-hover-dark;
+        color: $menu-icon-text-hover-dark;
+    }
+}
+
+.menu-icon-light {
+    background-color: $menu-icon;
+    color: $menu-icon-text;
+    &:hover {
+        background-color: $menu-icon-hover;
+        color: $menu-icon-text-hover;
+    }
+}

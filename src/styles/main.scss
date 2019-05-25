@@ -1,0 +1,31 @@
+@import "./colours.scss";
+
+body {
+    font-size: 18px;
+    margin: 0;
+}
+
+.content-base {
+    background-color: $background;
+    height: 100vh;
+    position: absolute;
+}
+
+.content-base-dark {
+    background-color: $background-dark;
+    color: white;
+    height: 100vh;
+    position: absolute;
+}
+
+.content {
+    padding-top: 120px;
+    padding-left: 350px;
+    padding-right: 70px;
+}
+
+.content-mobile {
+    padding-top: 120px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
