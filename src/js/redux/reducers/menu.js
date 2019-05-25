@@ -1,18 +1,18 @@
 import { 
-    DARK_MODE 
+    USER_MENU_OPEN 
 } from "../constants/actionTypes";
 
 const initialState = {
-    darkMode: false
+    userMenuOpen: false
 };
 
-export default function theme(state = initialState, action) {
+export default function menu(state = initialState, action) {
     switch(action.type)
     {
-        case DARK_MODE:
+        case USER_MENU_OPEN:
         {
             return Object.assign({}, state, {
-                darkMode: !state.darkMode
+                userMenuOpen: !state.userMenuOpen
             });
         }
         default:

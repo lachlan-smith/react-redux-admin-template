@@ -2,15 +2,18 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "../../../../styles/sidebar.scss";
-import { DARK_MODE } from "../../../redux/constants/actionTypes";
+import { DARK_MODE, USER_MENU_OPEN } from "../../../redux/constants/actionTypes";
 import { changeTheme } from "../../../redux/actions/index";
+import { openUserMenu } from "../../../redux/actions/menuActions";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import onClickOutside from "react-onclickoutside";
 
 interface Props {
     visible: boolean,
-    changeTheme: any
+    changeTheme: any,
+    userMenuOpen?: any
+    openUserMenu?: any
 }
 
 interface State {
@@ -19,13 +22,16 @@ interface State {
 
 const mapStateToProps = state => {
     return {
-        darkMode: state.theme.darkMode
+        darkMode: state.theme.darkMode,
+        userMenuOpen: state.menu.userMenuOpen
     }
 };
 
 const mapDispatchToProps = dispatch => ({
     changeTheme: payload => dispatch({ type: DARK_MODE, payload }),
+    openUserMenu: payload => dispatch({ type: USER_MENU_OPEN, payload }),
 })
+
 
 class Dropdown extends React.Component<Props, State> {
 
@@ -35,13 +41,17 @@ class Dropdown extends React.Component<Props, State> {
     }
 
     handleClickOutside = () => {
+        if (this.props.userMenuOpen) {
+            console.log("opening")
+            this.props.openUserMenu()
+        }
         
     };
 
     render() {
         return (
             <React.Fragment>
-                {this.state.visible ?
+                {this.props.userMenuOpen ?
                     <div className="p-4 dropdown shadow-md">
                         <FormControlLabel
                             control={
