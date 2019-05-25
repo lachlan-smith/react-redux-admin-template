@@ -46,9 +46,7 @@ class Header extends React.Component<Props, State> {
                         <div
                             className={"header-icon " + this.props.iconTheme + " ignore-react-onclickoutside"}
                             onClick={() => {
-                                if (!this.props.userMenuOpen) {
-                                    this.props.openUserMenu()
-                                }
+                                this.props.openUserMenu()
                             }}>
                             <FontAwesomeIcon icon={['fas', 'user']} />
                         </div>
