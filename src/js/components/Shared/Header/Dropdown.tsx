@@ -34,13 +34,8 @@ class Dropdown extends React.Component<Props, State> {
         this.state = { visible: this.props.visible }
     }
 
-    componentDidUpdate() {
-        console.log("State: " + this.state.visible);
-        console.log("Props: " + this.props.visible);
-    }
-
     handleClickOutside = () => {
-        this.setState({ visible: this.props.visible })
+        
     };
 
     render() {
