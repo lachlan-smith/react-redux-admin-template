@@ -84,7 +84,7 @@ class Sidebar extends React.Component<Props, State> {
                             : "absolute mobile-sidebar-open float-left "  + this.props.theme 
                     }
                 >
-                    <div className="pt-32">
+                    <div className={ this.props.mobileMode ? "pt-12" : "pt-32"}>
                         <div onClick={() => this.linkSelected() } >
                             <SidebarBtn
                                 text="Link 1"
