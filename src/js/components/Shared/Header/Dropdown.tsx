@@ -14,7 +14,8 @@ interface Props {
     visible: boolean,
     changeTheme: any,
     userMenuOpen?: any
-    openUserMenu?: any
+    openUserMenu?: any,
+    darkMode?: boolean
 }
 
 const mapStateToProps = state => {
@@ -38,7 +39,6 @@ class Dropdown extends React.Component<Props, {}> {
 
     handleClickOutside = () => {
         if (this.props.userMenuOpen) {
-            console.log("opening")
             this.props.openUserMenu()
         }
 
@@ -55,6 +55,7 @@ class Dropdown extends React.Component<Props, {}> {
                                     onChange={this.props.changeTheme}
                                     value="darkTheme"
                                     color="primary"
+                                    checked={this.props.darkMode}
                                 />
                             }
                             label=""
