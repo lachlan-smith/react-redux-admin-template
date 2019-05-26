@@ -48,6 +48,7 @@ class Sidebar extends React.Component<Props, State> {
     }
 
     handleClickOutside = () => {
+        console.log("clicked outside")
         if (this.state.open) {
             this.setState({ open: false })
         }
@@ -61,7 +62,7 @@ class Sidebar extends React.Component<Props, State> {
 
     render() {
         return (
-            <React.Fragment>
+            <div>
                 {this.props.mobileMode ? 
                     <div className={"absolute menu-icon px-16 " + this.props.menuTheme} onClick={() => this.openSidebar() } >
                         <FontAwesomeIcon icon={['fas', 'bars']} /> 
@@ -103,7 +104,7 @@ class Sidebar extends React.Component<Props, State> {
                         </div>
                     </div>
                 </div>
-            </React.Fragment>
+            </div>
         );
     }
 
