@@ -71,7 +71,7 @@ $header-height: 85px;
 .dropdown-light {
     background-color: $dropdown-colour;
     color: $dropdown-text;
-    &:hover {
+    &a:hover {
         color: $dropdown-text-hover;
     }
 }
@@ -79,7 +79,7 @@ $header-height: 85px;
 .dropdown-dark {
     background-color: $dropdown-colour-dark;
     color: $dropdown-text-dark;
-    &:hover {
+    &a:hover {
         color: $dropdown-text-hover-dark;
     }
 }
