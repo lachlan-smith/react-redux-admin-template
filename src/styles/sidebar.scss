@@ -29,6 +29,7 @@ $sidebar-width: 310px;
 .mobile-sidebar-open {
     visibility: visible;
     z-index: 60;
+    width: $sidebar-width;
 }
 
 .link-btn {
